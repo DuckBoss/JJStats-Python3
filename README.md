@@ -23,5 +23,7 @@ This utility is CLI only and it requires command line arguments.
 - "1 <arm, core, h264, isp, v3d, uart, pwm, emmc, pixel, vec, hdmi, dpi>"
 #### Displays set voltage of the chosen source -
 - "2 <core, sdram_c, sdram_i, sdram_p>"
+#### Displays memory management of the chosen source
+- "3 <arm, gpu>"
 #### Displays temperature (no source required) - 
-- "3"
+- "4"
