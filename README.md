@@ -1,5 +1,5 @@
 # JJStats-Python3
-- A small utility program to get system information.
+A small utility program to get system information.
 
 
 # Requirements/Dependencies
@@ -7,12 +7,12 @@
 - https://github.com/nicmcd/vcgencmd
 
 ## jjstats.py
-- This utility is CLI only and it requires user input.
-- Instructions are provided within the interface.
+This utility is CLI only and it requires user input.
+Instructions are provided within the interface.
 
 
 ## jjstats_args.py
-- This utility is CLI only and it requires command line arguments.
+This utility is CLI only and it requires command line arguments.
 
 ### Commands Format:
 - "python3 jjstats_args.py <command type> <command source>"
