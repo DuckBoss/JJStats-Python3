@@ -25,11 +25,16 @@ class JJStats:
                 outDisp = self.DisplayVoltage(str(sourceInput))
                 print(outDisp)
             elif(userInput == "3"):
+                sourceInput = input("Choose memory source:")
+                print("Gathering information...")
+                outDisp = self.DisplayMemory(str(sourceInput))
+                print(outDisp)
+            elif(userInput == "4"):
                 print("No source input required.")
                 print("Gathering information...")
                 outDisp = self.DisplayTemperature()
                 print(outDisp)
-            elif(userInput == "4"):
+            elif(userInput == "5"):
                 print("\nExiting...\n")
                 break
                 
@@ -42,8 +47,9 @@ class JJStats:
               "Commands:\n"+
               "1)Get Clock Frequency <arm, core, h264, isp, v3d, uart, pwm, emmc, pixel, vec, hdmi, dpi>\n"+
               "2)Get Set Voltage <core, sdram_c, sdram_i, sdram_p>\n"+
-              "3)Get Temperature <no parameters available>\n"+
-              "4)Exit\n"
+              "3)Get Memory Management <arm, gpu>\n" +
+              "4)Get Temperature <no parameters available> \n"+
+              "5)Exit\n"
               )
         
     def DisplayClock(self, item):
@@ -55,6 +61,10 @@ class JJStats:
     def DisplayTemperature(self):
         outItem = "\n" + str(vcgencmd.measure_temp()) + "C\n"
         return outItem
+    def DisplayMemory(self, item):
+        outItem = "\n" + str(vcgencmd.get_mem(item)) + "Bytes\n"
+        return outItem
+    
     
     
 
