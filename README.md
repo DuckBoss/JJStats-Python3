@@ -2,6 +2,10 @@
 - A small utility program to get system information.
 
 
+# Requirements/Dependencies
+- Python 3
+- https://github.com/nicmcd/vcgencmd
+
 ## jjstats.py
 - This utility is CLI only and it requires user input.
 - Instructions are provided within the interface.
