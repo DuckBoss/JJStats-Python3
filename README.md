@@ -14,7 +14,7 @@ Instructions are provided within the interface.
 ## jjstats_args.py
 This utility is CLI only and it requires command line arguments.
 
-### Commands Format:
+### Commands Format: (no quotes required)
 - "python3 jjstats_args.py 'command type' 'command source'"
 - "python3 jjstats_args.py 'command type'"
 
