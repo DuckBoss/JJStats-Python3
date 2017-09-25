@@ -15,8 +15,8 @@ Instructions are provided within the interface.
 This utility is CLI only and it requires command line arguments.
 
 ### Commands Format:
-- "python3 jjstats_args.py <command type> <command source>"
-- "python3 jjstats_args.py <command type>"
+- "python3 jjstats_args.py 'command type' 'command source'"
+- "python3 jjstats_args.py 'command type'"
 
 ### Available Commands:
 #### Displays frequency of the chosen source -
