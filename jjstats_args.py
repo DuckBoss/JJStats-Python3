@@ -16,7 +16,8 @@ class JJStats_Args:
                 print("available commands:\n"+
                       "1 <arm, core, h264, isp, v3d, uart, pwm, emmc, pixel, vec, hdmi, dpi> - Displays frequency of the chosen source\n"+
                       "2 <core, sdram_c, sdram_i, sdram_p> - Displays set voltage of the chosen source\n"+
-                      "3 <none> - Displays temperature in celsius\n")
+                      "3 <arm, gpu> - Displays memory management of the chosen source\n" +
+                      "4 <none> - Displays temperature in celsius\n")
                 sys.exit(1)
             
             if(len(sys.argv) == 3):
@@ -31,9 +32,14 @@ class JJStats_Args:
                     outDisp = self.DisplayVoltage(commandSource)
                     print(outDisp)
                     sys.exit(1)
+                elif(commandType == "3"):
+                    print("Gathering information...")
+                    outDisp = self.DisplayMemory(commandSource)
+                    print(outDisp)
+                    sys.exit(1)
             
                 
-            if(commandType == "3"):
+            if(commandType == "4"):
                 print("Gathering information...")
                 outDisp = self.DisplayTemperature()
                 print(outDisp)
@@ -57,9 +63,9 @@ class JJStats_Args:
     def DisplayTemperature(self):
         outItem = "\n" + str(vcgencmd.measure_temp()) + "C\n"
         return outItem
-    
-    
-
+    def DisplayMemory(self, item):
+        outItem = "\n" + str(vcgencmd.get_mem(item)) + "Bytes\n"
+        return outItem
 
 def main():
     program = JJStats_Args()
